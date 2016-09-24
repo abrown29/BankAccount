@@ -24,7 +24,32 @@ namespace BankAccount
             }
             else if (userChoice == 2)
             {
+                Console.WriteLine("Please choose a balance to view:\n1.Checking\n2.Reserve\n3.Savings");
+                int option = int.Parse(Console.ReadLine());
+                if(option == 1)
+                {
+                    spend.getBalance();
+                }
+                else if (option == 2)
+                {
+                    shortTerm.getBalance();
+                }
+                else if(option == 3)
+                {
+                    longTerm.getBalance();
+                }
+            }
+            else if (userChoice == 3)
+            {
 
+            }
+            else if (userChoice == 4)
+            {
+
+            }
+            else if (userChoice == 5)
+            {
+                Environment.Exit(0);
             }
         }
     }

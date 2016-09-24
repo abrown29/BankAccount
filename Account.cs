@@ -34,17 +34,19 @@ namespace BankAccount
         //methods 
         public virtual void getBalance()
         {
-            //writes balance of account
+           //writes account balance
         }
 
         public virtual void Deposit()
         {
             //deposits Galleons
+            Console.WriteLine("How much would you like to deposit?");
         }
 
         public virtual void Withdraw()
         {
             //withdraws Galleons
+            Console.WriteLine("How much would you like to withdraw?");
         }
 
         public void getInformation()

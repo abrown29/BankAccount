@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace BankAccount
 {
@@ -26,6 +27,34 @@ namespace BankAccount
         }
 
         //constructors
+        public Checking ()
+        {
+            this.accountType = "Spend";
+            this.checkingBalance = 25;
+        }
+
         //methods
+        public override void getBalance()
+        {
+            base.getBalance();
+            Console.WriteLine("You currently have " + this.checkingBalance + " Galleons");
+        }
+
+        public override void Deposit()
+        {
+            base.Deposit();
+            int amount = int.Parse(Console.ReadLine());
+            this.checkingBalance = amount + this.checkingBalance;
+            Console.WriteLine("+ " + amount);
+            
+        }
+
+        public override void Withdraw()
+        {
+            base.Withdraw();
+            int amount = int.Parse(Console.ReadLine());
+            this.checkingBalance = this.checkingBalance - amount;
+            Console.WriteLine("- " + amount);
+        }
     }
 }
