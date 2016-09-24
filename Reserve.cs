@@ -45,7 +45,6 @@ namespace BankAccount
             base.Deposit();
             int amount = int.Parse(Console.ReadLine());
             this.resBalance = amount + this.resBalance;
-            Console.WriteLine("+ " + amount);
         }
 
         public override void Withdraw()
@@ -53,7 +52,6 @@ namespace BankAccount
             base.Withdraw();
             int amount = int.Parse(Console.ReadLine());
             this.resBalance = this.resBalance - amount;
-            Console.WriteLine("- " + amount);
         }
     }
 }

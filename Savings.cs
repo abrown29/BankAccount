@@ -43,11 +43,15 @@ namespace BankAccount
         public override void Deposit()
         {
             base.Deposit();
+            int amount = int.Parse(Console.ReadLine());
+            this.savBalance = amount + this.savBalance;
         }
 
         public override void Withdraw()
         {
             base.Withdraw();
+            int amount = int.Parse(Console.ReadLine());
+            this.savBalance = this.savBalance - amount;
         }
     }
 }

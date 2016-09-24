@@ -45,7 +45,6 @@ namespace BankAccount
             base.Deposit();
             int amount = int.Parse(Console.ReadLine());
             this.checkingBalance = amount + this.checkingBalance;
-            Console.WriteLine("+ " + amount);
             
         }
 
@@ -54,7 +53,6 @@ namespace BankAccount
             base.Withdraw();
             int amount = int.Parse(Console.ReadLine());
             this.checkingBalance = this.checkingBalance - amount;
-            Console.WriteLine("- " + amount);
         }
     }
 }
