@@ -10,8 +10,8 @@ namespace BankAccount
     class Savings : Account // long-term savings
     {
         //fields
-        private string accountType;
-        private int savBalance;
+        private string accountType; //type
+        private int savBalance; //balance
 
         //properties
         public string AccountType
@@ -30,28 +30,36 @@ namespace BankAccount
         public Savings()
         {
             this.accountType = "Savings";
-            this.savBalance = 100;
+            this.savBalance = 100; //starting balance
         }
 
         //methods
-        public override void getBalance()
+        public override void getBalance() //displays current balance
         {
             base.getBalance();
             Console.WriteLine("You currently have " + this.savBalance + " Galleons");
         }
 
-        public override void Deposit()
+        public override void Deposit() //adds amount, saves as new balance
         {
             base.Deposit();
             int amount = int.Parse(Console.ReadLine());
             this.savBalance = amount + this.savBalance;
         }
 
-        public override void Withdraw()
+        public override void Withdraw() //removes amount, saves as new balance
         {
             base.Withdraw();
             int amount = int.Parse(Console.ReadLine());
             this.savBalance = this.savBalance - amount;
         }
+
+        static void writeSavings() //my attempt at the stream writer in the class. It doesn't show the username or account number, even though it's inherited from the account class
+        { 
+        StreamWriter saveaccount = new StreamWriter("..\\..\\Savings.txt");
+            using (saveaccount)
+            {
+                saveaccount.WriteLine("- " +)
+            }
     }
 }

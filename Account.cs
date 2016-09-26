@@ -49,9 +49,12 @@ namespace BankAccount
             Console.WriteLine("How much would you like to withdraw?");
         }
 
-        public void getInformation()
+        public void getInformation() //shows Client name and account number
         {
             Console.WriteLine(userName+"\n"+ vaultNum);
         }
+
+       
+        }
     }
-}
+

@@ -34,20 +34,20 @@ namespace BankAccount
         }
 
         //methods
-        public override void getBalance()
+        public override void getBalance() //shows current reserve balance
         {
             base.getBalance();
             Console.WriteLine("You currently have " + this.resBalance + " Galleons");
         }
 
-        public override void Deposit()
+        public override void Deposit() //add amount, then save new reserve balance
         {
             base.Deposit();
             int amount = int.Parse(Console.ReadLine());
             this.resBalance = amount + this.resBalance;
         }
 
-        public override void Withdraw()
+        public override void Withdraw() //subtracts amount from previous balance, then saves new balance
         {
             base.Withdraw();
             int amount = int.Parse(Console.ReadLine());

@@ -34,13 +34,13 @@ namespace BankAccount
         }
 
         //methods
-        public override void getBalance()
+        public override void getBalance() //shows current checking balance
         {
             base.getBalance();
             Console.WriteLine("You currently have " + this.checkingBalance + " Galleons");
         }
 
-        public override void Deposit()
+        public override void Deposit() //adds amount to balance, then saves result as new balance
         {
             base.Deposit();
             int amount = int.Parse(Console.ReadLine());
@@ -48,7 +48,7 @@ namespace BankAccount
             
         }
 
-        public override void Withdraw()
+        public override void Withdraw() //removes amount from previous balance, then saves result as new balance
         {
             base.Withdraw();
             int amount = int.Parse(Console.ReadLine());
